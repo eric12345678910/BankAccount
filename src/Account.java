@@ -1,8 +1,8 @@
 public class Account {
     // Initialize variables
-    private String firstName;
-    private String lastName;
-    private String accountId;
+    final String firstName;
+    final String lastName;
+    final String accountId;
     private double accountBalance = 0.0;
 
 
