@@ -27,5 +27,11 @@ public class Account {
         return accountBalance;
     }
 
+    public void accountSummary(){
+        System.out.println("/////////////////////////////////////////////////");
+        System.out.printf("Account Summary%nName: %s %s%nAccount Number: %s%nAccount Balance: %.2f%n", firstName, lastName, accountId, accountBalance);
+        System.out.println("/////////////////////////////////////////////////");
+    }
+
 
 }
