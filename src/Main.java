@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class Main {
             String accountNumber = scanner.nextLine();
 
         }
-        // Not a User
+        // Not a User - Create New Account
         else if(response.equals("n")){
             System.out.println("Don't have an account? Create one now!");
 
@@ -28,23 +29,30 @@ public class Main {
 
             System.out.println("Please enter your last name: ");
             String lastName = scanner.nextLine();
+            double accountBalance = 0.0;
 
+            // Create account number
+            Random random = new Random();
+
+            int accountNumber = 100000000 + random.nextInt(9000000);
+            System.out.println("accountNumber: " + accountNumber);
+
+
+            Account account1 = new Account(firstName, lastName, accountNumber, accountBalance);
         }
+
+        // Invalid Option - Try Again
         else{
             System.out.println("Error: Please enter a valid option.");
             return;
         }
 
 
-        System.out.println("Please enter your 9-digit account number: ");
-        String accountNumber = scanner.nextLine();
-
-        double accountBalance = 0.0;
 
         // Create new account
-        Account account = new Account(firstName, lastName, accountNumber, accountBalance);
+        //Account account = new Account(firstName, lastName, accountNumber, accountBalance);
 
-        account.accountSummary();
+        //account.accountSummary();
 
         scanner.close();
     }
