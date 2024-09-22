@@ -3,7 +3,7 @@ public class Account {
     private String firstName;
     private String lastName;
     private String accountId;
-    private double accountBalance;
+    private double accountBalance = 0.0;
 
 
     public Account(String firstName, String lastName, String accountId, double accountBalance) {
@@ -21,7 +21,7 @@ public class Account {
         return lastName;
     }
     public String getAccountId() {
-        return accountId;
+        return accountId; // keeping account number as a string
     }
     public double getAccountBalance() {
         return accountBalance;
